@@ -3,6 +3,7 @@
     --ligth-grayishgreen: #E9EDC9;
     --almost-white: #FEFAE0;
     --light-beige: #FAEDCD;
+    --off-red: #9e2a2b;
     --beige: #D4A373;
 }
 
@@ -41,9 +42,15 @@ img {
 }
 
 /* #region main */
+
+#site_main {
+    padding: 4rem 2rem;
+}
+
 .box {
     display: flex;
-    flex-flow: column nowrap;
+    flex-flow: row wrap;
+    justify-content: center;
     max-width: 60%;
     margin: 1rem auto;
     padding: 1rem;
@@ -54,16 +61,18 @@ img {
     margin: 1rem 0;
 }
 
-.box i {
-    align-self: center;
+.box.verified i {
     color: var(--ligth-grayishgreen);
 }
 
+.box.error i {
+    color: var(--off-red);
+}
+
 .account {
+    width: 100%;
     color: var(--almost-white);
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    text-align: center;
 }
 
 .account > span {
@@ -71,23 +80,61 @@ img {
     color: var(--ligth-grayishgreen);
 }
 
-.game {
-    background-color: var(--light-beige);
+.btn-error {
+    width: 100%;
+    display: flex;
+    justify-content: center;
 }
 
-.game img {
-    max-width: 30%;
-    align-self: center;
+.btn-error a, button {
+    padding: 1rem;
+    width: 30%;
+    border-radius: 1rem;
+}
+
+.btn-error a {
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+    color: var(--off-red);
+    background-color: var(--almost-white);
+}
+
+.game {
+    color: var(--beige);
+    background-color: var(--light-beige);
+   
+}
+
+.game .score {
+    flex-basis: 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    
+}
+
+.game .score > span {
+    margin-right: 1rem;
+}
+
+
+.game .image {
+    flex-basis: 40%;
+    display: flex;
+    justify-content: center;
+    
+
+}
+
+.game .image img {
+    max-width: 50%;
 }
 
 .game button {
     color: var(--almost-white);
     background-color: var(--beige);
-    border-color: var(--almost-white);
-    border-style: solid;
-    padding: 1rem;
-    align-self: center;
-    width: 30%;
-    border-radius: 1rem;
+    border: none;
 }
 /* #endregion */

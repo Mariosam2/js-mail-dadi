@@ -22,16 +22,24 @@
             <div class="box verified">
                 <h1 class="title">L'account inserito è stato verificato correttamente!</h1>
                 <i class="fa-regular fa-circle-check fa-5x"></i>
-                <div class="account">La tua e-mail:<span>Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                        Libero, quae?</span></div>
+                <div class="account">La tua e-mail:<span id="mail"></span></div>
 
             </div>
-            <div class="box error d-none">
-                <h1>L'account inserito non fa parte degli utenti verificati</h1>
-                <a href="#">Riprova</a>
+            <div class="box error ">
+                <h1 class="title">L'account inserito non fa parte degli utenti verificati</h1>
+                <i class="fa-regular fa-circle-xmark fa-5x"></i>
+                <div class="btn-error">
+                    <a href="#">Riprova</a>
+                </div>
+                
             </div>
             <div class="box game">
-                <img src="./assets/img/dice.webp" alt="">
+                <div class="score">
+                    <span id="userScore">Il tuo score:</span>
+                    <span id="cpuScore">Score del computer:</span>
+                </div>
+                <div class="image"><img src="./assets/img/dice.webp" alt=""></div>
+                
                 <button>Gioca</button>
             </div>
         </div>
