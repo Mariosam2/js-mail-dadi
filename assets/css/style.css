@@ -86,11 +86,6 @@ img {
     justify-content: center;
 }
 
-.btn-error a, button {
-    padding: 1rem;
-    width: 30%;
-    border-radius: 1rem;
-}
 
 .btn-error a {
     display: inline-block;
@@ -98,6 +93,11 @@ img {
     text-decoration: none;
     color: var(--off-red);
     background-color: var(--almost-white);
+}
+
+.btn-error a:hover {
+    background-color: var(--light-beige);
+    
 }
 
 .game {
@@ -135,6 +135,22 @@ img {
 .game button {
     color: var(--almost-white);
     background-color: var(--beige);
-    border: none;
+    border: 2px solid transparent;
 }
+
+.game button:hover {
+    background-color: var(--almost-white);
+    color: var(--beige);
+    cursor: pointer;
+    border: 2px solid var(--beige);
+}
+
+
+.btn-error a, button {
+    padding: 1rem;
+    width: 30%;
+    border-radius: 1rem;
+    transition: all 0.2s ease;
+}
+
 /* #endregion */
