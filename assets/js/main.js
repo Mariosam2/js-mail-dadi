@@ -13,13 +13,17 @@ Generare un numero random da 1 a 6, sia per il giocatore sia per il computer. St
 // inizializzazione array e variabili costanti
 const boxes = document.querySelectorAll('.box');
 const playButton = document.getElementById('play');
+const mail = document.getElementById('mail');
+// punteggi
+const userScore = document.getElementById('userScore');
+const cpuScore = document.getElementById('cpuScore');
 const mailArray = ['pippo']
 const userMail = prompt('Inserisci la tua email');
 
 
 for(let i = 0; i < mailArray.length; i++){
     if(userMail === mailArray[i]){
-        console.log(boxes);
+        mail.innerHTML = mailArray[i]
         // display del gioco
         boxes.forEach(box => {
             if(!box.classList.contains("error")){
@@ -36,3 +40,20 @@ for(let i = 0; i < mailArray.length; i++){
     }
 
 }
+
+playButton.addEventListener('click', ()=>{
+    let currentUserScore = Math.floor(Math.random()*12) +1;
+    let currentCpuScore = Math.floor(Math.random()*12) +1;
+    if(currentUserScore > currentCpuScore) {
+        alert('Hai vinto!');
+    } else if(currentUserScore == currentCpuScore) {
+        alert('Pareggio!');
+    } else {
+        alert('Hai perso!');
+    }
+    userScore.innerHTML = currentUserScore;
+    cpuScore.innerHTML = currentCpuScore;
+    
+
+
+});
