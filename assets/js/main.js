@@ -17,18 +17,22 @@ const mail = document.getElementById('mail');
 // punteggi
 const userScore = document.getElementById('userScore');
 const cpuScore = document.getElementById('cpuScore');
-const mailArray = ['pippo']
+const mailArray = ['pippo.pluto@gmail.com', 'pluto.pippo@hotmail.com', 'ciofanidaniel@libero.it', 'pippo']
 const userMail = prompt('Inserisci la tua email');
 
 
 for(let i = 0; i < mailArray.length; i++){
-    if(userMail === mailArray[i]){
+    if(userMail == mailArray[i]){
         mail.innerHTML = mailArray[i]
         // display del gioco
         boxes.forEach(box => {
-            if(!box.classList.contains("error")){
+            if(!(box.classList.contains("error"))){
+                console.log(box);
                 box.classList.remove("d-none");
+            } else {
+                box.classList.add("d-none")
             } 
+            
         });
     } else {
         // account non verificato riprova
