@@ -1,0 +1,93 @@
+:root {
+    --grayish-green: #CCD5AE;
+    --ligth-grayishgreen: #E9EDC9;
+    --almost-white: #FEFAE0;
+    --light-beige: #FAEDCD;
+    --beige: #D4A373;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Maven Pro', sans-serif;
+}
+
+body {
+    background-color: var(--beige);
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.container {
+    width: 80%;
+    max-width: 1320px;
+    margin: 0 auto;
+}
+
+.title {
+    text-align: center;
+    color: var(--almost-white);
+}
+
+
+/* utilities */
+
+.box.d-none {
+    display: none;
+}
+
+/* #region main */
+.box {
+    display: flex;
+    flex-flow: column nowrap;
+    max-width: 60%;
+    margin: 1rem auto;
+    padding: 1rem;
+    border-radius: 1rem;
+}
+
+.box >* {
+    margin: 1rem 0;
+}
+
+.box i {
+    align-self: center;
+    color: var(--ligth-grayishgreen);
+}
+
+.account {
+    color: var(--almost-white);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.account > span {
+    margin: 0 1rem;
+    color: var(--ligth-grayishgreen);
+}
+
+.game {
+    background-color: var(--light-beige);
+}
+
+.game img {
+    max-width: 30%;
+    align-self: center;
+}
+
+.game button {
+    color: var(--almost-white);
+    background-color: var(--beige);
+    border-color: var(--almost-white);
+    border-style: solid;
+    padding: 1rem;
+    align-self: center;
+    width: 30%;
+    border-radius: 1rem;
+}
+/* #endregion */

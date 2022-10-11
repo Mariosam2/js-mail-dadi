@@ -1,14 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./assets/cs/style.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
     <script src="./assets/js/main.js" defer></script>
     <title>Mail-Dadi</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+        integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Maven+Pro:wght@500;700&display=swap" rel="stylesheet">
 </head>
+
 <body>
-    
+    <main id="site_main">
+        <div class="container">
+            <div class="box verified">
+                <h1 class="title">L'account inserito è stato verificato correttamente!</h1>
+                <i class="fa-regular fa-circle-check fa-5x"></i>
+                <div class="account">La tua e-mail:<span>Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                        Libero, quae?</span></div>
+
+            </div>
+            <div class="box error d-none">
+                <h1>L'account inserito non fa parte degli utenti verificati</h1>
+                <a href="#">Riprova</a>
+            </div>
+            <div class="box game">
+                <img src="./assets/img/dice.webp" alt="">
+                <button>Gioca</button>
+            </div>
+        </div>
+    </main>
+    <!-- /#site_main -->
+
 </body>
+
 </html>
