@@ -8,6 +8,7 @@ Generare un numero random da 1 a 6, sia per il giocatore sia per il computer. St
 // for loop (e forEach)
 // array
 // innerHTML
+// Math.floor(), Math.random()
 
 
 // inizializzazione array e variabili costanti
@@ -24,7 +25,6 @@ let canAccess;
 for(let i = 0; i < mailArray.length; i++){
     if(userMail == mailArray[i]){
         mail.innerHTML = mailArray[i]
-        // display del gioco
         canAccess = true;
     } 
 }
@@ -32,6 +32,7 @@ for(let i = 0; i < mailArray.length; i++){
 //console.log(canAccess);
 
 if(canAccess) {
+    // display del gioco
     boxes.forEach(box => {
         if(!(box.classList.contains("error"))){
             box.classList.remove("d-none");
@@ -41,6 +42,7 @@ if(canAccess) {
         
     });
 } else {
+    // account non valido riprova
     boxes.forEach(box => {
         if(!(box.classList.contains("error"))){
             box.classList.add("d-none");
