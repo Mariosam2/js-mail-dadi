@@ -36,8 +36,6 @@ if(canAccess) {
     boxes.forEach(box => {
         if(!(box.classList.contains("error"))){
             box.classList.remove("d-none");
-        } else {
-            box.classList.add("d-none")
         } 
         
     });
