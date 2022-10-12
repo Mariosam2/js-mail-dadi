@@ -17,31 +17,38 @@ const mail = document.getElementById('mail');
 // punteggi
 const userScore = document.getElementById('userScore');
 const cpuScore = document.getElementById('cpuScore');
-const mailArray = ['pippo.pluto@gmail.com', 'pluto.pippo@hotmail.com', 'ciofanidaniel@libero.it']
+const mailArray = ['pippo@example.com', 'pippo.pluto@gmail.com', 'pluto.pippo@hotmail.com', 'ciofanidaniel@libero.it']
 const userMail = prompt('Inserisci la tua email');
 
-
+let canAccess;
 for(let i = 0; i < mailArray.length; i++){
     if(userMail == mailArray[i]){
         mail.innerHTML = mailArray[i]
         // display del gioco
-        boxes.forEach(box => {
-            if(!(box.classList.contains("error"))){
-                box.classList.remove("d-none");
-            } else {
-                box.classList.add("d-none")
-            } 
-            
-        });
-    } else {
-        // account non verificato riprova
-        boxes.forEach(box => {
-            if (!(box.classList.contains("verified") || box.classList.contains("game"))){
-                box.classList.remove("d-none");
-            }
-        });
-    }
+        canAccess = true;
+    } 
+}
 
+//console.log(canAccess);
+
+if(canAccess) {
+    boxes.forEach(box => {
+        if(!(box.classList.contains("error"))){
+            box.classList.remove("d-none");
+        } else {
+            box.classList.add("d-none")
+        } 
+        
+    });
+} else {
+    boxes.forEach(box => {
+        if(!(box.classList.contains("error"))){
+            box.classList.add("d-none");
+        } else {
+            box.classList.remove("d-none")
+        } 
+        
+    });
 }
 
 playButton.addEventListener('click', ()=>{
